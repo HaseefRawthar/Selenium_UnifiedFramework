@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-27T12:58:23 IST" name="Default suite" finished-at="2022-09-27T12:58:29 IST" duration-ms="6540">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-09-27T12:58:23 IST" name="Default test" finished-at="2022-09-27T12:58:29 IST" duration-ms="6540">
+      <class name="com.NopCommerce.api.runner.APIRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:23 IST" name="setUpClass" finished-at="2022-09-27T12:58:23 IST" duration-ms="238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7e2f16bd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-27T12:58:26 IST" duration-ms="3215" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Delete User API"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Delete User API, delete a user"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [405]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [405]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:839)
+at org.testng.Assert.assertEquals(Assert.java:849)
+at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+at ✽.A success response is received(file:///C:/Users/haseef.rawthar/eclipse-workspace/NopCommerce/src/test/java/com/NopCommerce/api/feature/DeleteUser.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-27T12:58:27 IST" duration-ms="1069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Get Users API"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Get users API, get all user list"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-27T12:58:28 IST" duration-ms="685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Post User API"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Post User API, create user"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-27T12:58:29 IST" duration-ms="1130" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Put User API"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put User API, update user"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [405]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [405]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:839)
+at org.testng.Assert.assertEquals(Assert.java:849)
+at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+at ✽.A success response is received(file:///C:/Users/haseef.rawthar/eclipse-workspace/NopCommerce/src/test/java/com/NopCommerce/api/feature/PutUser.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:29 IST" name="tearDownClass" finished-at="2022-09-27T12:58:29 IST" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.NopCommerce.api.runner.APIRunner@550dbc7a]" started-at="2022-09-27T12:58:29 IST" name="teardown" finished-at="2022-09-27T12:58:30 IST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.NopCommerce.api.runner.APIRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
