@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test  name="Cucumber with TestNG Test">
     <classes>
-      <class name="com.NopCommerce.runner.APIRunner"/>
+      <class name="com.NopCommerce.runner.UIRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
