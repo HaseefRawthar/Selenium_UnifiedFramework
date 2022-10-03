@@ -9,6 +9,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
@@ -38,7 +39,12 @@ public class SetUp {
 		 //PropertyConfigurator.configure(log4jConfPath);  //configure log file path
 		 
 		 //String url = "https://www.nopcommerce.com/en/demo";
-		 driver = new ChromeDriver();
+		 ChromeOptions options = new ChromeOptions();
+		 options.addArguments("window-size=1920,1080");
+		 options.addArguments("start-maximized");
+		 options.addArguments("headless");
+		 driver = new ChromeDriver(options); 
+		 //driver = new ChromeDriver();
 	     driver.manage().window().maximize();
 	     //driver.get(url);
 	    
