@@ -33,7 +33,7 @@ public class SetUp {
 	public void start()
 	{
 		try {
-		 System.setProperty("webdriver.chrome.driver", projectFolder+"/src/main/java/chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", "/blob/master/src/main/java/chromedriver.exe");
 		 //log = Logger.getLogger(SetUp.class.getName());
 		 //System.setProperty("logPath", projectFolder+"/Logs/LogFile");
 		 //PropertyConfigurator.configure(log4jConfPath);  //configure log file path
