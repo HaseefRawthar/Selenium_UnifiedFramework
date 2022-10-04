@@ -10,6 +10,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UIHooks extends SetUp {
 
@@ -24,6 +25,7 @@ public class UIHooks extends SetUp {
 	{
 		try
 		{
+			WebDriverManager.chromedriver().setup();
 			start();
 		}
 		catch(Exception e) {

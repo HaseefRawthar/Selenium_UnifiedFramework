@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>NopCommerce</td>
         <td>1</td>
-      <td>03 Oct 2022, 16:35</td>
+      <td>03 Oct 2022, 17:55</td>
     </tr>
   </tbody>
 </table>
@@ -115,70 +115,86 @@ $(document).ready(function() {
 
         <tbody>
             <tr>
-              <td class="location">com.NopCommerce.hooks.UIHooks.setUp()</td>
+              <td class="location">com.NopCommerce.api.hooks.APIHooks.setUp()</td>
+              <td>4</td>
+              <td class="duration" data-value="724046925">0.724</td>
+              <td class="duration" data-value="724046925">2.004</td>
+              <td class="duration" data-value="2896187700">2.896</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received()</td>
+              <td>4</td>
+              <td class="duration" data-value="792850">0.000</td>
+              <td class="duration" data-value="792850">0.003</td>
+              <td class="duration" data-value="3171400">0.003</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.user_sends_a_valid_delete_user_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="883774700">0.883</td>
+              <td class="duration" data-value="883774700">0.883</td>
+              <td class="duration" data-value="883774700">0.883</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.user_sends_a_valid_get_users_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="307657000">0.307</td>
+              <td class="duration" data-value="307657000">0.307</td>
+              <td class="duration" data-value="307657000">0.307</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.user_sends_a_valid_post_users_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="314939500">0.314</td>
+              <td class="duration" data-value="314939500">0.314</td>
+              <td class="duration" data-value="314939500">0.314</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.user_sends_a_valid_put_user_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="579063200">0.579</td>
+              <td class="duration" data-value="579063200">0.579</td>
+              <td class="duration" data-value="579063200">0.579</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.verify_response_schema(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="74856950">0.074</td>
+              <td class="duration" data-value="74856950">0.299</td>
+              <td class="duration" data-value="299427800">0.299</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.verify_response_time_and_size()</td>
+              <td>4</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.NopCommerce.api.stepdefenition.APISteps.verify_the_result_using_get_api(java.lang.String)</td>
               <td>2</td>
-              <td class="duration" data-value="1673739500">1.673</td>
-              <td class="duration" data-value="1673739500">2.107</td>
-              <td class="duration" data-value="3347479000">3.347</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.NopCommerce.hooks.UIHooks.takeScreenshotAndCloseBrowser(io.cucumber.java.Scenario)</td>
-              <td>2</td>
-              <td class="duration" data-value="620626650">0.620</td>
-              <td class="duration" data-value="620626650">0.629</td>
-              <td class="duration" data-value="1241253300">1.241</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.NopCommerce.stepdefenition.LoginSteps.user_navigates_to_login_screen()</td>
-              <td>2</td>
-              <td class="duration" data-value="4549937650">4.549</td>
-              <td class="duration" data-value="4549937650">4.823</td>
-              <td class="duration" data-value="9099875300">9.099</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.NopCommerce.stepdefenition.LoginSteps.user_tries_to_login_with_invalid_credentials()</td>
-              <td>1</td>
-              <td class="duration" data-value="4634447600">4.634</td>
-              <td class="duration" data-value="4634447600">4.634</td>
-              <td class="duration" data-value="4634447600">4.634</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.NopCommerce.stepdefenition.LoginSteps.user_tries_to_login_with_valid_credentials()</td>
-              <td>1</td>
-              <td class="duration" data-value="7581108900">7.581</td>
-              <td class="duration" data-value="7581108900">7.581</td>
-              <td class="duration" data-value="7581108900">7.581</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.NopCommerce.stepdefenition.LoginSteps.verify_the_error_message()</td>
-              <td>1</td>
-              <td class="duration" data-value="70277700">0.070</td>
-              <td class="duration" data-value="70277700">0.070</td>
-              <td class="duration" data-value="70277700">0.070</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.NopCommerce.stepdefenition.LoginSteps.verify_the_text_from_dashboard()</td>
-              <td>1</td>
-              <td class="duration" data-value="73011000">0.073</td>
-              <td class="duration" data-value="73011000">0.073</td>
-              <td class="duration" data-value="73011000">0.073</td>
-              <td class="passed">100.00%</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
             </tr>
         </tbody>
 
         <tfoot class="total">
           <tr>
-            <td>7</td>
-            <td>10</td>
-            <td class="duration">2.604</td>
-            <td class="duration">9.099</td>
-            <td class="duration">26.047</td>
+            <td>9</td>
+            <td>22</td>
+            <td class="duration">0.240</td>
+            <td class="duration">2.896</td>
+            <td class="duration">5.284</td>
             <td>Totals</td>
           </tr>
         </tfoot>

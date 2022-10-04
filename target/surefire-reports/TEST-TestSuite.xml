@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="TestSuite" time="26.1" errors="0" skipped="0">
+<testsuite tests="4" failures="2" name="TestSuite" time="5.368" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.15.1+2-LTS-10"/>
@@ -41,12 +41,11 @@
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.specification.version" value="11"/>
-    <property name="suiteXMLFile" value="testng.xml"/>
     <property name="user.name" value="haseef.rawthar"/>
     <property name="java.class.path" value="C:\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -DsuiteXMLFile=testng.xml"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.15.1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -66,6 +65,155 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.NopCommerce.runner.UIRunner" name="runScenario" time="12.316"/>
-  <testcase classname="com.NopCommerce.runner.UIRunner" name="runScenario" time="13.784"/>
+  <testcase classname="com.NopCommerce.api.runner.APIRunner" name="runScenario" time="2.96">
+    <failure message="expected [200] but found [405]" type="java.lang.AssertionError">java.lang.AssertionError: expected [200] but found [405]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+	at ✽.A success response is received(file:///D:/NopCommerce/src/test/java/com/NopCommerce/api/feature/DeleteUser.feature:7)
+</failure>
+    <system-out>
+@API @Success
+Scenario: Verify Delete User API               &amp;#27;[90m# src/test/java/com/NopCommerce/api/feature/DeleteUser.feature:5&amp;#27;[0m
+{&quot;code&quot;:0,&quot;message&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;Id&quot;:161540,&quot;Name&quot;:&quot;Tester&quot;,&quot;Email&quot;:&quot;tester@test.com&quot;,&quot;Token&quot;:&quot;ab0054a9-ccb8-45b7-a03e-47e317d028bc&quot;}}
+ab0054a9-ccb8-45b7-a03e-47e317d028bc
+Post Response body: {
+    &quot;id&quot;: 164674,
+    &quot;name&quot;: &quot;Gayatri&quot;,
+    &quot;email&quot;: &quot;oxipfmjd8k5c@email.com&quot;,
+    &quot;profilepicture&quot;: &quot;http://restapi.adequateshop.com/Media//Images/userimageicon.png&quot;,
+    &quot;location&quot;: &quot;USA&quot;,
+    &quot;createdat&quot;: &quot;2022-10-03T12:24:53.9909914Z&quot;
+}
+Response code: 405
+Response Time: 241
+Response Size: 1293
+Response body: &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;/&gt;
+    &lt;title&gt;405 - HTTP verb used to access this page is not allowed.&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+&amp;lt;!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:&quot;trebuchet MS&quot;, Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+--&amp;gt;
+&lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt;
+      &lt;h1&gt;Server Error&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;content&quot;&gt;
+      &lt;div class=&quot;content-container&quot;&gt;
+        &lt;fieldset&gt;
+          &lt;h2&gt;405 - HTTP verb used to access this page is not allowed.&lt;/h2&gt;
+          &lt;h3&gt;The page you are looking for cannot be displayed because an invalid method (HTTP verb) was used to attempt access.&lt;/h3&gt;
+        &lt;/fieldset&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mUser sends a valid Delete User request&amp;#27;[0m &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.user_sends_a_valid_delete_user_request()&amp;#27;[0m
+  &amp;#27;[31mWhen &amp;#27;[0m&amp;#27;[31mA success response is received&amp;#27;[0m          &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received()&amp;#27;[0m
+      &amp;#27;[31mjava.lang.AssertionError: expected [200] but found [405]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+	at âœ½.A success response is received(file:///D:/NopCommerce/src/test/java/com/NopCommerce/api/feature/DeleteUser.feature:7)
+&amp;#27;[0m
+  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mVerify response time and size&amp;#27;[0m           &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.verify_response_time_and_size()&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mcreateUser&amp;#27;[0m&amp;#27;[36m response schema&amp;#27;[0m        &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.verify_response_schema(java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify the &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mdeleteResult&amp;#27;[0m&amp;#27;[36m using get api&amp;#27;[0m    &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.verify_the_result_using_get_api(java.lang.String)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="com.NopCommerce.api.runner.APIRunner" name="runScenario" time="0.915"/>
+  <testcase classname="com.NopCommerce.api.runner.APIRunner" name="runScenario" time="0.631"/>
+  <testcase classname="com.NopCommerce.api.runner.APIRunner" name="runScenario" time="0.862">
+    <failure message="expected [200] but found [405]" type="java.lang.AssertionError">java.lang.AssertionError: expected [200] but found [405]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+	at ✽.A success response is received(file:///D:/NopCommerce/src/test/java/com/NopCommerce/api/feature/PutUser.feature:7)
+</failure>
+    <system-out>
+@API @Success
+Scenario: Verify Put User API               &amp;#27;[90m# src/test/java/com/NopCommerce/api/feature/PutUser.feature:5&amp;#27;[0m
+{&quot;code&quot;:0,&quot;message&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;Id&quot;:161540,&quot;Name&quot;:&quot;Tester&quot;,&quot;Email&quot;:&quot;tester@test.com&quot;,&quot;Token&quot;:&quot;05a0b99d-0641-4141-a44a-688902cc4f09&quot;}}
+05a0b99d-0641-4141-a44a-688902cc4f09
+Post Response body: {
+    &quot;id&quot;: 164676,
+    &quot;name&quot;: &quot;Gouranga&quot;,
+    &quot;email&quot;: &quot;phqfvitv9e3z@email.com&quot;,
+    &quot;profilepicture&quot;: &quot;http://restapi.adequateshop.com/Media//Images/userimageicon.png&quot;,
+    &quot;location&quot;: &quot;USA&quot;,
+    &quot;createdat&quot;: &quot;2022-10-03T12:24:56.5471019Z&quot;
+}
+164676
+Response code: 405
+Response Time: 250
+Response Size: 1293
+Response body: &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;/&gt;
+    &lt;title&gt;405 - HTTP verb used to access this page is not allowed.&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+&amp;lt;!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:&quot;trebuchet MS&quot;, Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+--&amp;gt;
+&lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt;
+      &lt;h1&gt;Server Error&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;content&quot;&gt;
+      &lt;div class=&quot;content-container&quot;&gt;
+        &lt;fieldset&gt;
+          &lt;h2&gt;405 - HTTP verb used to access this page is not allowed.&lt;/h2&gt;
+          &lt;h3&gt;The page you are looking for cannot be displayed because an invalid method (HTTP verb) was used to attempt access.&lt;/h3&gt;
+        &lt;/fieldset&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mUser sends a valid Put User request&amp;#27;[0m &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.user_sends_a_valid_put_user_request()&amp;#27;[0m
+  &amp;#27;[31mWhen &amp;#27;[0m&amp;#27;[31mA success response is received&amp;#27;[0m       &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received()&amp;#27;[0m
+      &amp;#27;[31mjava.lang.AssertionError: expected [200] but found [405]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+	at âœ½.A success response is received(file:///D:/NopCommerce/src/test/java/com/NopCommerce/api/feature/PutUser.feature:7)
+&amp;#27;[0m
+  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mVerify response time and size&amp;#27;[0m        &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.verify_response_time_and_size()&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mcreateUser&amp;#27;[0m&amp;#27;[36m response schema&amp;#27;[0m     &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.verify_response_schema(java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify the &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mputResult&amp;#27;[0m&amp;#27;[36m using get api&amp;#27;[0m    &amp;#27;[90m# com.NopCommerce.api.stepdefenition.APISteps.verify_the_result_using_get_api(java.lang.String)&amp;#27;[0m
+</system-out>
+  </testcase>
 </testsuite>

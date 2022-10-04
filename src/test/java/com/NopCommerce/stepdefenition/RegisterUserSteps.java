@@ -6,6 +6,8 @@ import com.NopCommerce.baseclass.SetUp;
 import com.NopCommerce.objectrepository.HomeObject;
 import com.NopCommerce.objectrepository.LandingPageObject;
 import com.NopCommerce.objectrepository.RegisterUserObject;
+import com.NopCommerce.testdata.RegisterUserData;
+import com.NopCommerce.testdata.TestDataImportUI;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,6 +19,9 @@ public class RegisterUserSteps extends SetUp {
 	private LandingPageObject landingpageObj;
 	private RegisterUserObject registeruserObj;
 	private HomeObject homeObj;
+	private TestDataImportUI tdImport;
+	private RegisterUserData regUserDataObj;
+	String[] testData;
 	
 	public RegisterUserSteps()
 	{
@@ -26,6 +31,10 @@ public class RegisterUserSteps extends SetUp {
 			landingpageObj = new LandingPageObject(driver);
 			registeruserObj = new RegisterUserObject(driver);
 			homeObj = new HomeObject(driver);
+			tdImport = new TestDataImportUI();
+			regUserDataObj = new RegisterUserData();
+			
+			tdImport.readSheet("RegisterUser");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -54,7 +63,9 @@ public class RegisterUserSteps extends SetUp {
 	public void user_enters_data_in_all_fields() {
 	    try
 	    {
-	    	registeruserObj.registration("Tom", "Smith", "email22@email.com", "Test", "password");
+	    	regUserDataObj.generateFakeRegisterData();
+	    	testData = regUserDataObj.registerUserData();
+	    	registeruserObj.registration(testData[0], testData[1], testData[2], testData[3], testData[4]);
 	    }
 	    catch(Exception e) {
 	    	System.out.print("Exception occurred is: "+ e.toString());

@@ -41,9 +41,10 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Feature: Verify Login Feature</title>
+<title>Cucumber Reports (no 1) - Failures Overview</title>
 
 </head>
+
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
@@ -55,7 +56,7 @@ $(document).ready(function() {
         <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
         <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
           <li role="presentation" ><a href="overview-trends.html">Trends</a></li>
-        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
       </ul>
     </div>
   </div>
@@ -77,7 +78,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>NopCommerce</td>
         <td>1</td>
-      <td>03 Oct 2022, 16:35</td>
+      <td>03 Oct 2022, 17:55</td>
     </tr>
   </tbody>
 </table>
@@ -90,67 +91,10 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Feature Report</h2>
+    <h2>Failures Overview</h2>
+      <p>The following summary displays scenarios that failed.</p>
   </div>
 </div>
-
-
-<div class="container-fluid" id="report">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <table class="stats-table">
-
-
-<thead>
-  <tr class="header dont-sort">
-      <th></th>
-    <th colspan="6">Steps</th>
-    <th colspan="3">Scenarios</th>
-    <th colspan="2">Features</th>
-  </tr>
-  <tr>
-    <th>Feature</th>
-    <th class="passed">Passed</th>
-    <th class="failed">Failed</th>
-    <th class="skipped">Skipped</th>
-    <th class="pending">Pending</th>
-    <th class="undefined">Undefined</th>
-    <th class="total">Total</th>
-
-    <th class="passed">Passed</th>
-    <th class="failed">Failed</th>
-    <th class="total">Total</th>
-
-    <th>Duration</th>
-    <th>Status</th>
-  </tr>
-</thead>
-
-
-        <tbody>
-        <tr>
-          <td class="tagname">Verify Login Feature</td>
-          <td      class="passed"    >6</td>
-          <td >0</td>
-          <td >0</td>
-          <td >0</td>
-          <td >0</td>
-          <td class="total">6</td>
-
-          <td  class="passed"    >2</td>
-          <td >0</td>
-          <td class="total">2</td>
-
-          <td class="duration" data-value="21458720500">21.458</td>
-          <td class="passed">Passed</td>
-        </tr>
-        </tbody>
-
-      </table>
-    </div>
-  </div>
-</div>
-
 
 
 <div class="container-fluid">
@@ -168,45 +112,31 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <div class="feature">
 
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2149477107.html">@Web</a>
-       <a href="report-tag_4053346056.html">@Login</a>
-</div>
-
-
-<div class="brief passed">
-  <span class="keyword indention">Feature</span>
-  <span class="name">Verify Login Feature</span>
-
-
-</div>
-
-        <div class="description indention"></div>
-
-        <div class="elements inner-level">
+        <div class="elements">
 
 <div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1078018295.html">Delete User API, delete a user</a>
+    </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2149477107.html">@Web</a>
-       <a href="report-tag_4053346056.html">@Login</a>
+       <a href="report-tag_2149455289.html">@API</a>
        <a href="report-tag_1815678882.html">@Success</a>
 </div>
 
 
-  <span class="lead-duration duration">9.528</span>
+  <span class="lead-duration duration">0.886</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify Login with invalid credentials</span>
+  <span class="name">Verify Delete User API</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -235,9 +165,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">com.NopCommerce.hooks.UIHooks.setUp()</span>
+              <span class="location name">com.NopCommerce.api.hooks.APIHooks.setUp()</span>
 
-  <span class="lead-duration duration">2.107</span>
+  <span class="lead-duration duration">2.004</span>
 
           </div>
 
@@ -254,9 +184,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -272,9 +202,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">User navigates to login screen</span>
+  <span class="name">User sends a valid Delete User request</span>
 
-  <span class="lead-duration duration">4.823</span>
+  <span class="lead-duration duration">0.883</span>
 
 </div>
 
@@ -297,11 +227,57 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
-  <span class="name">User tries to login with invalid credentials</span>
+  <span class="name">A success response is received</span>
 
-  <span class="lead-duration duration">4.634</span>
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [200] but found [405]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+	at &#10045;.A success response is received(file:///D:/NopCommerce/src/test/java/com/NopCommerce/api/feature/DeleteUser.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify response time and size</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -324,11 +300,38 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">Verify the error message</span>
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Verify <span class="argument">createUser</span> response schema</span>
 
-  <span class="lead-duration duration">0.070</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Verify the <span class="argument">deleteResult</span> using get api</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -354,62 +357,33 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-4" class="inner-level collapse collapsable-details  in ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.NopCommerce.hooks.UIHooks.takeScreenshotAndCloseBrowser(io.cucumber.java.Scenario)</span>
-
-  <span class="lead-duration duration">0.629</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
 
   </div>
 </div>
 
 
 <div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_3_2036821735.html">Put User API, update user</a>
+    </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2149477107.html">@Web</a>
-       <a href="report-tag_4053346056.html">@Login</a>
+       <a href="report-tag_2149455289.html">@API</a>
        <a href="report-tag_1815678882.html">@Success</a>
 </div>
 
 
-  <span class="lead-duration duration">11.930</span>
+  <span class="lead-duration duration">0.579</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify Login with valid credentials</span>
+  <span class="name">Verify Put User API</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -438,9 +412,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">com.NopCommerce.hooks.UIHooks.setUp()</span>
+              <span class="location name">com.NopCommerce.api.hooks.APIHooks.setUp()</span>
 
-  <span class="lead-duration duration">1.239</span>
+  <span class="lead-duration duration">0.280</span>
 
           </div>
 
@@ -457,9 +431,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -475,9 +449,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">User navigates to login screen</span>
+  <span class="name">User sends a valid Put User request</span>
 
-  <span class="lead-duration duration">4.276</span>
+  <span class="lead-duration duration">0.579</span>
 
 </div>
 
@@ -500,11 +474,57 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
-  <span class="name">User tries to login with valid credentials</span>
+  <span class="name">A success response is received</span>
 
-  <span class="lead-duration duration">7.581</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [200] but found [405]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at com.NopCommerce.api.stepdefenition.APISteps.a_success_response_is_received(APISteps.java:238)
+	at &#10045;.A success response is received(file:///D:/NopCommerce/src/test/java/com/NopCommerce/api/feature/PutUser.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify response time and size</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -527,11 +547,38 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">Verify the text from dashboard</span>
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Verify <span class="argument">createUser</span> response schema</span>
 
-  <span class="lead-duration duration">0.073</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Verify the <span class="argument">putResult</span> using get api</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -557,45 +604,12 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-8" class="inner-level collapse collapsable-details  in ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.NopCommerce.hooks.UIHooks.takeScreenshotAndCloseBrowser(io.cucumber.java.Scenario)</span>
-
-  <span class="lead-duration duration">0.611</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
 
   </div>
 </div>
 
         </div>
 
-      </div>
     </div>
   </div>
 </div>
