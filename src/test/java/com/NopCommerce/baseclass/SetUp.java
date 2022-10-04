@@ -33,20 +33,13 @@ public class SetUp {
 	public void start()
 	{
 		try {
-		 System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
-		 //log = Logger.getLogger(SetUp.class.getName());
-		 //System.setProperty("logPath", projectFolder+"/Logs/LogFile");
-		 //PropertyConfigurator.configure(log4jConfPath);  //configure log file path
-		 
-		 //String url = "https://www.nopcommerce.com/en/demo";
 		 ChromeOptions options = new ChromeOptions();
-		 options.addArguments("window-size=1920,1080");
-		 options.addArguments("start-maximized");
-		 options.addArguments("headless");
-		 driver = new ChromeDriver(options); 
-		 //driver = new ChromeDriver();
-	     driver.manage().window().maximize();
-	     //driver.get(url);
+		options.addArguments("--no-sandbox");
+         	options.addArguments("--headless");
+         	options.addArguments("--disable-dev-shm-usage");
+         	options.addArguments("--window-size=1920x1080");        
+         	driver = new ChromeDriver(options);
+	    // driver.manage().window().maximize();
 	    
 	     log.info("Page opened");
 	     
