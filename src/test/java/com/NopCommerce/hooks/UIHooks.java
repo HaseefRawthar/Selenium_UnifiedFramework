@@ -24,6 +24,7 @@ public class UIHooks extends SetUp {
 	{
 		try
 		{
+			WebDriverManager.chromedriver().setup();
 			start();
 		}
 		catch(Exception e) {
