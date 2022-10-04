@@ -33,7 +33,7 @@ jobs:
     - name: Build with Maven
       #run: mvn --batch-mode --update-snapshots clean verify
       run:           
-          ./mvnw clean verify
+          ./mvn clean verify
    
     - name: Upload Cucumber Report
       uses: actions/upload-artifact@v2
