@@ -4,6 +4,7 @@ D:\NopCommerce\src\test\java\com\NopCommerce\testdata\LoginData.java
 D:\NopCommerce\src\test\java\com\NopCommerce\stepdefenition\LoginSteps.java
 D:\NopCommerce\src\test\java\com\NopCommerce\stepdefenition\RegisterUserSteps.java
 D:\NopCommerce\src\test\java\com\NopCommerce\api\runner\APIRunner.java
+D:\NopCommerce\src\test\java\com\NopCommerce\testdata\RegisterUserData.java
 D:\NopCommerce\src\test\java\com\NopCommerce\api\testdata\TestDataImportAPI.java
 D:\NopCommerce\src\test\java\com\NopCommerece\testscripts\AdminLogin.java
 D:\NopCommerce\src\test\java\com\NopCommerce\testdata\TestDataImportUI.java

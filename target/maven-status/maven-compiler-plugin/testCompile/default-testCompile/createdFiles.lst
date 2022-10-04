@@ -1,4 +1,5 @@
 com\NopCommerce\objectrepository\DashboardObject.class
+com\NopCommerce\testdata\RegisterUserData.class
 com\NopCommerce\api\runner\APIRunner.class
 com\NopCommerce\baseclass\SetUp.class
 com\NopCommerce\utility\Utilities.class
