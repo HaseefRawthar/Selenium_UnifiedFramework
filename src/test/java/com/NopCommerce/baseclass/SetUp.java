@@ -33,6 +33,7 @@ public class SetUp {
 	public void start()
 	{
 		try {
+<<<<<<< HEAD
 		 //System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
 
 		 //String url = "https://www.nopcommerce.com/en/demo";
@@ -50,6 +51,15 @@ public class SetUp {
 		 //driver = new ChromeDriver();
 	     //driver.manage().window().maximize();
 	     //driver.get(url);
+=======
+		 ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+         	options.addArguments("--headless");
+         	options.addArguments("--disable-dev-shm-usage");
+         	options.addArguments("--window-size=1920x1080");        
+         	driver = new ChromeDriver(options);
+	    // driver.manage().window().maximize();
+>>>>>>> 5c14c320c7fae1a9d1a58d8f3a61f7b66dc0da5c
 	    
 	     log.info("Page opened");
 	     
